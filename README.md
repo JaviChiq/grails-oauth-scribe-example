@@ -4,12 +4,13 @@ Example Grails project showing integration with multiple OAuth providers using s
 Currently supports Google+, Facebook, Twiiter, GitHub and LinkedIn.
 It uses underneath [scribe-java](https://github.com/fernandezpablo85/scribe-java) library.
 
+# Demo
+
+This Grails project is deployed on CloudFoundry, you can see it in action on [here](http://grails-oauth-scribe-example.cloudfoundry.com)
+
 # Installation
 
-Clone repository and try to start grails:
-```grails run-app```
-
-If succeed, you have to register your application to various OAuth providers, see table below:
+Before starting you have to register your application to various OAuth providers, see table below:
 
 <table>
 <tr><th>Provider</th><th>Where to register application</th></tr>
@@ -19,12 +20,15 @@ If succeed, you have to register your application to various OAuth providers, se
 <tr><td>Linkedin</td><td>https://www.linkedin.com/secure/developer?newapp=</td></tr>
 </table>
 
-Then, rename ```oauth.properties.template``` from grails-app/conf to ```oauth.properties``` and copy the API and secret keys to corresponding property of the file.
+Then, rename ```oauth.properties.template``` from ```grails-app/conf``` to ```oauth.properties``` and copy the API and secret keys to corresponding property of the file.
 Example of Google below:
 
 ![google](http://i.imgur.com/zhfBe.png)
 
-You should now be able to login with your social accounts. Beware of callback URLs - not all providers support application hosted on localhost :( But deploying on [cloudfoundry](http://grails.org/plugin/cloud-foundry/) should help.
+And start application:
+```grails run-app```
+
+You should now be able to login with your social accounts. Beware of callback URLs - not all providers support application hosted on localhost... But deploying on [cloudfoundry](http://grails.org/plugin/cloud-foundry/) should help.
 
 Enjoy!
 
